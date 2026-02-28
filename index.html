@@ -275,7 +275,7 @@
 
 <!-- Start screen -->
 <div class="overlay" id="start-screen">
-  <h1>🎈 v3 max-Schießen</h1>
+  <h1>🎈 v4 max-Schießen</h1>
   <p>max auf Ballons bevor sie entkommen! Lass keinen durch!</p>
   <button class="btn" onclick="startGame()">Spielen!</button>
 </div>
@@ -294,8 +294,8 @@ let score = 0, lives = 3, level = 1;
 let balloons = [];
 let spawnTimer, levelTimer;
 let gameRunning = false;
-let spawnInterval = 2800;
-let baseSpeed = 15;
+let spawnInterval = 1800;
+let baseSpeed = 25;
 
 const COLORS = [
   { fill:'#ff4d6d', shine:'#ff9dae', string:'#cc2244' },
@@ -338,7 +338,7 @@ function startGame() {
   document.getElementById('game').innerHTML = '';
   balloons = [];
   score = 0; lives = 3; level = 1;
-  spawnInterval = 1800; baseSpeed = 9;
+  spawnInterval = 1800; baseSpeed = 25;
   clearInterval(spawnTimer); clearInterval(levelTimer);
   gameRunning = true;
   updateHUD();
